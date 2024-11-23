@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Form example</title>
+</head>
+<body>
+    <h3>Employee info:</h3>
+    <form method="post" action="employee">
+        <p>Name:<input type="text" name="user_name" /></p>
+        <p>Age:<input type="number" name="user_age" /></p>
+        <p>
+            Skils:<br />
+                  <select name="user_scills" multiple>
+                      <option>Java</option>
+                      <option>C++</option>
+                      <option>Php</option>
+                      <option>C#</option>
+                      <option>JavaScript</option>
+                  </select>
+        </p>
+        <p><input type="submit" value="Send" /></p>
+    </form>
+</body>
+</html>

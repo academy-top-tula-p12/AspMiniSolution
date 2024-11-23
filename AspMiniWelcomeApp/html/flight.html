@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Flight</title>
+</head>
+<body>
+    <h2 id="info"></h2>
+
+    <h3>Flight info:</h3>
+    <form name="flight">
+        <p>
+            Name:
+            <input type="text" name="name" />
+        </p>
+        <p>
+            From City:
+            <input type="text" name="fromCity" />
+        </p>
+        <p>
+            ToCity:
+            <input type="text" name="toCity" />
+        </p>
+        <p>
+            Date:
+            <input type="date" name="date" />
+        </p>
+        <p>
+            Time:
+            <input type="time" name="time" />
+        </p>
+        <button id="btn">Send</button>
+    </form>
+    
+
+    <script>
+        let btn = document.getElementById("btn");
+        let form = document.forms["flight"];
+
+        btn.addEventListener("click", async () => {
+            let response = await fetch("/flight", {
+                method: "POST",
+                headers: {
+                    "Accept": "application/json",
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    name: form["name"],
+                    fromCity: form["fromCity"],
+                    toCity: form["toCity"],
+                    date: form["date"],
+                    time: form["time"],
+                })
+            });
+
+            let answer = await response.text();
+            document.getElementById("info").innerText = answer;
+        });
+    </script>
+</body>
+</html>
