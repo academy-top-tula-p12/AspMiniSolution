@@ -1,24 +1,45 @@
+using AspDependencyInjectionApp;
+using Microsoft.Extensions.DependencyInjection;
+
 var builder = WebApplication.CreateBuilder(args);
+
+//builder.Services.AddTransient<IDateService, LongDateService>();
+//builder.Services.AddTransient<LongTimeService>();
+
+//builder.Services.AddLongDateService();
+//builder.Services.AddLongTimeService();
+
+
+//builder.Services.AddTransient<RandomCounter>();
+//builder.Services.AddTransient<CounterService>();
+
+//builder.Services.AddScoped<RandomCounter>();
+//builder.Services.AddScoped<CounterService>();
+
+//builder.Services.AddSingleton<RandomCounter>();
+//builder.Services.AddSingleton<CounterService>();
+
+
+
+//builder.Services.AddTransient<IMessageLogger, JsonMessageLogger>();
+//builder.Services.AddTransient<IMessageLogger, XmlMessageLogger>();
+
+var messageService = new MessageService();
+
+builder.Services.AddSingleton<IMessageLogger>(messageService);
+builder.Services.AddSingleton<IMessageSender>(messageService);
+
 var app = builder.Build();
 
-var services = builder.Services;
+//app.UseMiddleware<CounterMiddleware>();
+//app.UseMiddleware<MessageLoggerMiddleware>();
 
-app.Run(async context =>
-{
-    string responseString = "<table><tr><td>Name</td><td>LifeTime</td><td>Implemetation</td></tr>";
-    foreach (var service in services)
-    {
-        responseString += "<tr>";
-        responseString += $"<td>{service.ServiceType.Name}</td>";
-        responseString += $"<td>{service.Lifetime}</td>";
-        responseString += $"<td>{service.ImplementationType?.Name}</td>";
-        responseString += "</tr>";
-    }
-    responseString += "</table>";
-
-    context.Response.ContentType = "text/html; charset=utf-8";
-    await context.Response.WriteAsync(responseString);
-});
-
+app.UseMiddleware<XmlLoggerMiddleware>();
+app.UseMiddleware<MailSenderMiddleware>();
 
 app.Run();
+
+
+
+
+
