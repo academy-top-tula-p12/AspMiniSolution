@@ -3,15 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35514.174
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspMiniWelcomeApp", "AspMiniWelcomeApp\AspMiniWelcomeApp.csproj", "{8781CB49-1976-4CEF-BE09-68758F82FFF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspMiniWelcomeApp", "AspMiniWelcomeApp\AspMiniWelcomeApp.csproj", "{8781CB49-1976-4CEF-BE09-68758F82FFF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspDependencyInjectionApp", "AspDependencyInjectionApp\AspDependencyInjectionApp.csproj", "{8420382A-E091-4D5C-8E5F-E70E8DC55934}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspDependencyInjectionApp", "AspDependencyInjectionApp\AspDependencyInjectionApp.csproj", "{8420382A-E091-4D5C-8E5F-E70E8DC55934}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspRoutingApp", "AspRoutingApp\AspRoutingApp.csproj", "{4E521373-EC56-49DB-B55D-31A8B3839836}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspRoutingApp", "AspRoutingApp\AspRoutingApp.csproj", "{4E521373-EC56-49DB-B55D-31A8B3839836}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspStaticFilesApp", "AspStaticFilesApp\AspStaticFilesApp.csproj", "{BE237DE1-E3ED-4271-9FE2-50BC28C63696}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspStaticFilesApp", "AspStaticFilesApp\AspStaticFilesApp.csproj", "{BE237DE1-E3ED-4271-9FE2-50BC28C63696}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspConfigurationApp", "AspConfigurationApp\AspConfigurationApp.csproj", "{F5857308-E092-4845-97EF-10E89BFBAFC8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspConfigurationApp", "AspConfigurationApp\AspConfigurationApp.csproj", "{F5857308-E092-4845-97EF-10E89BFBAFC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspResultsApiApp", "AspResultsApiApp\AspResultsApiApp.csproj", "{E8911EBD-5FAF-4A57-81E1-15E383070DC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspCookiesSessionsApp", "AspCookiesSessionsApp\AspCookiesSessionsApp.csproj", "{FE42C6AE-1D78-47AF-955E-E2CAB8CE0481}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,8 +43,19 @@ Global
 		{F5857308-E092-4845-97EF-10E89BFBAFC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5857308-E092-4845-97EF-10E89BFBAFC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5857308-E092-4845-97EF-10E89BFBAFC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8911EBD-5FAF-4A57-81E1-15E383070DC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8911EBD-5FAF-4A57-81E1-15E383070DC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8911EBD-5FAF-4A57-81E1-15E383070DC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8911EBD-5FAF-4A57-81E1-15E383070DC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE42C6AE-1D78-47AF-955E-E2CAB8CE0481}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE42C6AE-1D78-47AF-955E-E2CAB8CE0481}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE42C6AE-1D78-47AF-955E-E2CAB8CE0481}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE42C6AE-1D78-47AF-955E-E2CAB8CE0481}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3C96A282-17F4-4A8B-9795-17CA0ACDC669}
 	EndGlobalSection
 EndGlobal
