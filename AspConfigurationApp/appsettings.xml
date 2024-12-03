@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+	<!--<Logging>
+		<LogLevel>
+			<Default>Developing</Default>
+			<Source>ServerDb</Source>
+		</LogLevel>
+	</Logging>-->
+	<Employee>
+		<Name>
+			<First>Billy</First>
+			<Second>Smith</Second>
+		</Name>
+	</Employee>
+	<AllowedHosts>*</AllowedHosts>
+</configuration>
